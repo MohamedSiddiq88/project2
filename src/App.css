@@ -1,6 +1,48 @@
-.App {
+/* .App {
   text-align: center;
+} */
+
+
+/* navbar */
+.navbar{
+  height: 10vh;
 }
+
+/* headin of the page */
+.head h1{
+  margin-top:10vh;
+  margin-bottom: 3vh;
+  text-align: center;
+  font-size: 75px;
+  font-weight:bold;
+}
+
+
+.navbar-nav{
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-item{
+  margin-right: 1.5rem;
+}
+
+.link {
+  text-decoration: none !important;
+  color: white;
+}
+
+.link:hover{
+  color: yellowgreen;
+}
+
+body{
+  background-color: #333;
+  color: white;
+}
+
+
+
 
 .App-logo {
   height: 40vmin;
@@ -27,6 +69,68 @@
 .App-link {
   color: #61dafb;
 }
+
+
+/* nav */
+#nav{
+  /* text-align: center; */
+  color: white;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 10vh;
+  
+}
+
+.nav-item{
+  margin: 0 3rem;
+  /* border: 1px solid black; */
+  cursor: pointer;
+}
+.sub-nav{
+  display: flex;
+  /* border: 1px solid black; */
+
+}
+
+/* dashboard */
+.dashboard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.home-card{
+  background-color: white;
+  color:#333;
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+  font-weight: 600;
+}
+
+
+.page{
+  text-align: center;
+}
+
+.heading{
+  margin: 3rem;
+  font-weight: bolder;
+  text-align: center;
+}
+
+@media screen and (max-width:480px) {
+  .head h1{
+      text-align: center;
+      font-size: 50px;
+      font-weight:bold;
+  }
+}
+
 
 @keyframes App-logo-spin {
   from {
