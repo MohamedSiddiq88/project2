@@ -44,16 +44,9 @@ body{
 
 
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+
+
 
 .App-header {
   background-color: #282c34;
@@ -117,10 +110,57 @@ body{
   text-align: center;
 }
 
+
+
 .heading{
   margin: 3rem;
   font-weight: bolder;
   text-align: center;
+}
+
+/* login */
+.login_container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.login_card{
+position: relative;
+border-style: none;
+display: flex;
+justify-content: center;
+  max-width: 400px;
+  /* background-color: rgba(51, 51, 51, 0.372); */
+  background-image: linear-gradient(180deg, #7d7d7d, #302f2f);
+  backdrop-filter: blur(100px);
+}
+.login_card p,
+.login_card h5,
+.login_card label{
+  color:white;
+
+}
+
+
+.background_img{
+position: absolute;
+left: 15px;
+filter: blur(8px);
+z-index: -1;
+}
+
+.background_img img{
+  height: 350px;
+  margin: auto;
+  display: block;
+}
+
+.logo_with_text img{
+  /* height: 200px; */
+  max-height: 400px;
+  /* margin: auto; */
 }
 
 @media screen and (max-width:480px) {
@@ -129,14 +169,11 @@ body{
       font-size: 50px;
       font-weight:bold;
   }
+
 }
 
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media screen and (max-width:1000px) {
+  .img_col{
+    display: none;
   }
 }

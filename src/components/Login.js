@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import schoolLogo from "./school_logo.png"
 
 function Login() {
   const navigate = useNavigate();
@@ -38,10 +39,20 @@ function Login() {
   };
 
   return (
-    <div className="container mt-5 login_container">
+    <div className='login_container'>
+<div className="container mt-5">
       <div className="row">
-        <div className="col-md-6 mx-auto">
-          <div className="card">
+        <div className='col-md-6 img_col'>
+        <div className='logo_with_text'>
+            <img src={schoolLogo}/>
+          </div>
+        </div>
+        <div className="col-md-6 mx-auto login_card_col">
+          
+          <div className="card login_card">
+          <div className='logo_with_text background_img'>
+            <img src={schoolLogo}/>
+          </div>
             <div className="card-body">
               <div>
                 <h5 className="card-title">User Login</h5>
@@ -79,7 +90,7 @@ function Login() {
                   </Link>
                 </div>
                 <div className="form-group">
-                  <button className="btn btn-primary btn-block" onClick={handleLogin}>
+                  <button className="btn btn-outline-primary btn-block" onClick={handleLogin}>
                     Login
                   </button>
                 </div>
@@ -92,6 +103,8 @@ function Login() {
         </div>
       </div>
     </div>
+    </div>
+    
   );
 }
 

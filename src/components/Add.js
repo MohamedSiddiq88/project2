@@ -18,7 +18,7 @@ import React, { useContext, useEffect } from 'react'
 
 
 function Add() {
-  const {studentData,setStudentData, }=useContext(MyContext);
+  const {studentData,setStudentData,fetchProfiles }=useContext(MyContext);
 
   const {handleSubmit, values, handleChange,handleBlur,touched,errors, resetForm }=useFormik({
     initialValues:{
@@ -40,7 +40,6 @@ function Add() {
   const createStudent = async(newStudentData) => {
     
     //fetch data
-    // const response=await fetch("https://645899734eb3f674df7800be.mockapi.io/students", {
     const response=await fetch("https://student-teacher-project2.onrender.com/profile/create", {
 
       method:"POST",
@@ -53,7 +52,7 @@ function Add() {
       const data2 = await response.json();
       setStudentData([...studentData, data2]);
       resetForm();
-      
+      fetchProfiles();
       //when data is added successfully
       window.alert("Data added successfully!");
     } else {
@@ -66,9 +65,9 @@ function Add() {
     <MainPage>
 
       <div className="container add">
+
         {/* row*/}
         <div className="row  add-container">
-
 
           {/* col */}
           <div className="col-12">

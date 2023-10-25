@@ -5,7 +5,7 @@ import Context, { MyContext } from '../context/Context';
 
 
 function Nav(){
-  const {profileOf}=useContext(MyContext);
+  const {setProfileOf,profileOf}=useContext(MyContext);
     
     const navigate=useNavigate();
 
@@ -21,8 +21,8 @@ function Nav(){
     <div  className='navbar navbar-dark bg-dark'>
         <div className='sub-nav'>
         <p onClick={()=>navigate("/")} className='nav-item link'>Home</p>
-        <p onClick={()=>navigate("/student")} className='nav-item link'>Student</p>
-        <p onClick={()=>navigate("/teacher")} className='nav-item link'>Teacher</p>
+        <p onClick={()=>navigate("/profiles", setProfileOf("Student"))} className='nav-item link'>Student</p>
+        <p onClick={()=>navigate("/profiles",setProfileOf("Teacher"))} className='nav-item link'>Teacher</p>
         
         </div>
         <div className='sub-nav'>

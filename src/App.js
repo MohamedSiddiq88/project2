@@ -12,6 +12,8 @@ import Edit from './components/Edit';
 import Teachersprofiles from './components/Teachersprofiles';
 import AddTeacher from './components/AddTeacher';
 import EditTeacher from './components/EditTeacher';
+import Profiles from './components/Profiles';
+import EditProfile from './components/EditProfile';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         <Route path="/teacher" element={<Teachersprofiles />} />
         <Route path="/addteacher" element={<AddTeacher />} />
         <Route path="/editteacher" element={<EditTeacher />} />
+        <Route path="/profiles" element={<Profiles />} />
+        <Route path="/edit-profile/:id" element={<EditProfile />} />
 
 
        </Routes>

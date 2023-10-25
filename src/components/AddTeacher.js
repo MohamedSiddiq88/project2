@@ -19,7 +19,7 @@ import { MyContext } from "../context/Context";
 
 function AddTeacher() {
 
-  const {teacherData,setTeacherData}=useContext(MyContext);
+  const {teacherData,setTeacherData,fetchProfiles}=useContext(MyContext);
 
   const {handleSubmit, values, handleChange,handleBlur,touched,errors, resetForm}=useFormik({
     initialValues:{
@@ -53,6 +53,7 @@ function AddTeacher() {
       const newdata=await response.json();
       setTeacherData([...teacherData, newdata]);
       resetForm();
+      fetchProfiles();
       
       //when data is added successfully
       window.alert("Data added successfully!");
